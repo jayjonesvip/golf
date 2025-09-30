@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Golf Swing Simulator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+<div class="tee"> 
+    <div id="club-buttons">
+      <button id="wedge" onclick="setClub('wedge')">Wedge ~ 100yds</button>
+      <button id="iron" onclick="setClub('iron')">Iron ~ 200yds</button>
+      <button id="driver" onclick="setClub('driver')">Driver ~ 300yds</button>
+    </div>
+
+    <br />
+
+    <div id="power-buttons">
+      <button id="light" disabled onclick="setPower('light')">Light</button>
+      <button id="average" disabled onclick="setPower('average')">Average</button>
+      <button id="strong" disabled onclick="setPower('strong')">Strong</button>
+    </div>
+    
+    <div id="accuracy-counter">
+      <div id="accuracy-counter-inside">
+        <span id="accuracy"></span>
+      </div>
+    </div>
+    
+    <button id="swing" disabled onclick="stopAccuracy()">Swing</button>       
+    
+    <p>Hole Details</p>
+    <div>    
+      <span>Par</span>: <span id="par"></span>
+      <span>Distance</span>: <span id="hole-distance"></span>
+    </div>    
+    
+    <div id="hole-container">
+      <div id="hole">
+        <div id="pin"></div>
+        <div id="ball"></div>
+      </div>
+    </div>
+        
+    <div>
+      <span id="offset"></span><span> yds</span>
+      <span id="distance"></span><span> yds</span>      
+      <span id="far"></span>
+    </div>
+    
+    <div id="message"></div>
+  </div>
+    <script src="golf.js"></script>
+  </body>
+</html>
